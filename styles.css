@@ -23,7 +23,6 @@ h4 {
 
 .weekDays {
     background-color: #ebdbd0;
-    list-style-type: none;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
