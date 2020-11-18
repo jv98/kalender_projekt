@@ -61,4 +61,6 @@ h4 {
     background-color: blanchedalmond;
     padding: 1rem 1rem;
     height: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 6rem 6rem 6rem 6rem 6rem 6rem;
 }
