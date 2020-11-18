@@ -48,12 +48,12 @@ h4 {
     flex: 20%;
     left: 0;
     font-family: optima, fantasy;
-
+    border: 3px outset gray;  
 }
 
 .calendar {
     width: 80%;
-    float: 80%;
+    flex: 80%;
 }
 
 .gridContainer {
