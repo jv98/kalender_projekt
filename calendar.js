@@ -10,7 +10,6 @@ function fetchDays() {
         type: "GET",
         dataType: "jsonp",
         success: function(response) {
-            console.log(response.dagar)
             addCalendar(response.dagar);
         }
     });
