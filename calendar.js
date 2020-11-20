@@ -1,8 +1,10 @@
+/** renders the calendar on the page */
 function renderCalendar() {
     fetchDays();
     renderCalendarHeader();
 }
 
+/** shows previous month in the calendar */
 function showPreviousMonth() {
     if(month == 01) {
         year--;
@@ -12,9 +14,9 @@ function showPreviousMonth() {
     month--;
     }
     renderCalendar();
-
 }
 
+/** shows next month in the calendar */
 function showNextMonth() {
     if(month == 12) {
         year++;
@@ -24,9 +26,9 @@ function showNextMonth() {
     month++;
     }
     renderCalendar();
-
 }
 
+/** fetches an array of the days of the current month from the API */
 function fetchDays() {
     $.ajax({
         url: `http://sholiday.faboul.se/dagar/v2.1/${year}/${month}`,
@@ -38,12 +40,14 @@ function fetchDays() {
     });
 }
 
+/** renders the calendar header that displays month and year */
 function renderCalendarHeader() {
     let monthName = getMonthName(month);
     let calendarHeader = document.getElementById("calendar-header");
     calendarHeader.innerHTML = monthName + " " + year;
 }
 
+/** adds days to the calendar container */
 function renderDays(daysInAMonth) {
     const container = document.getElementById("calendar-div");
     container.innerHTML = "";
@@ -52,6 +56,11 @@ function renderDays(daysInAMonth) {
     container.append(...dayDivs);
 }
 
+/** 
+ * creates an array of divs of the days of the month 
+ * containing the date and the name of the holiday if it is a holiday,
+ * also adds empty divs if the month doesn't start on a monday
+ */
 function createDayDivs(days) { 
     const dayDivs = [];  
     const weekdayIndex = getWeekdayIndex(days[0].veckodag)
@@ -77,6 +86,7 @@ function createDayDivs(days) {
     return dayDivs;
 }
 
+/** creates an index for the first day of the month, depending on which weekday it is */
 function getWeekdayIndex(weekday){
     switch(weekday) {
         case "Måndag": return 0;
@@ -89,6 +99,7 @@ function getWeekdayIndex(weekday){
     }
 }
 
+/** converts the number of each month to its name */
 function getMonthName(month) {
     switch(month) {
         case 01: return "Januari";
