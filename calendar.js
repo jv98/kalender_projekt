@@ -1,21 +1,7 @@
-window.addEventListener("load", main)
-let year = 2020;
-let month = 11;
-
-
-function main() {
-    addEventListeners();
-    showCalendar();
+function renderCalendar() {
+    fetchDays();
+    renderCalendarHeader();
 }
-
-function addEventListeners() {
-    const previousMonthIcon = document.getElementById("previous-month-icon");
-    previousMonthIcon.addEventListener("click", showPreviousMonth);
-
-    const nextMonthIcon = document.getElementById("next-month-icon");
-    nextMonthIcon.addEventListener("click", showNextMonth);
-}
-
 
 function showPreviousMonth() {
     if(month == 01) {
@@ -25,9 +11,10 @@ function showPreviousMonth() {
     else {
     month--;
     }
-    showCalendar();
+    renderCalendar();
 
 }
+
 function showNextMonth() {
     if(month == 12) {
         year++;
@@ -36,20 +23,17 @@ function showNextMonth() {
     else {
     month++;
     }
-    showCalendar();
+    renderCalendar();
 
 }
-function showCalendar() {
-    fetchDays();
-    renderCalendarHeader();
-}
+
 function fetchDays() {
     $.ajax({
         url: `http://sholiday.faboul.se/dagar/v2.1/${year}/${month}`,
         type: "GET",
         dataType: "jsonp",
         success: function(response) {
-            renderCalendar(response.dagar);
+            renderDays(response.dagar);
         }
     });
 }
@@ -59,7 +43,8 @@ function renderCalendarHeader() {
     let calendarHeader = document.getElementById("calendar-header");
     calendarHeader.innerHTML = monthName + " " + year;
 }
-function renderCalendar(daysInAMonth) {
+
+function renderDays(daysInAMonth) {
     const container = document.getElementById("calendar-div");
     container.innerHTML = "";
 
@@ -76,7 +61,6 @@ function createDayDivs(days) {
             emptyDiv.innerHTML = "";
             dayDivs.push(emptyDiv);
         }
-
 
     for (const day of days) {
         const dayDiv = document.createElement("div")
@@ -116,4 +100,3 @@ function getMonthName(month) {
         
     }
 }
-//"".split("-")
