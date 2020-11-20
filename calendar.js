@@ -56,7 +56,7 @@ function createDayDivs(days) {
     const dayDivs = [];  
     const weekdayIndex = getWeekdayIndex(days[0].veckodag)
 
-        for( let i=0; i<weekdayIndex; i++ ) {
+        for ( let i=0; i<weekdayIndex; i++ ) {
             const emptyDiv = document.createElement("div")
             emptyDiv.innerHTML = "";
             dayDivs.push(emptyDiv);
@@ -64,8 +64,14 @@ function createDayDivs(days) {
 
     for (const day of days) {
         const dayDiv = document.createElement("div")
-        //hämta todos för datumet
-        dayDiv.innerHTML = day.datum.split("-")[2];
+        //ATT FIXA: hämta todos för det aktuella datumet
+        if (day.helgdag !== undefined) {
+            dayDiv.innerHTML = day.datum.split("-")[2] + " " + day.helgdag;
+            dayDiv.style.color = "red";
+        }
+        else {
+            dayDiv.innerHTML = day.datum.split("-")[2];
+        }
         dayDivs.push(dayDiv); 
     }
     return dayDivs;
@@ -96,7 +102,6 @@ function getMonthName(month) {
         case 09: return "September";
         case 10: return "Oktober";
         case 11: return "November";
-        case 12: return "December";
-        
+        case 12: return "December";       
     }
 }
