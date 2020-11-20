@@ -2,6 +2,7 @@ window.addEventListener("load", main)
 let year = 2020;
 let month = 11;
 
+
 function main() {
     addEventListeners();
     showCalendar();
@@ -40,7 +41,7 @@ function showNextMonth() {
 }
 function showCalendar() {
     fetchDays();
-    ren
+    renderCalendarHeader();
 }
 function fetchDays() {
     $.ajax({
@@ -53,6 +54,11 @@ function fetchDays() {
     });
 }
 
+function renderCalendarHeader() {
+    let monthName = getMonthName(month);
+    let calendarHeader = document.getElementById("calendar-header");
+    calendarHeader.innerHTML = monthName + " " + year;
+}
 function renderCalendar(daysInAMonth) {
     const container = document.getElementById("calendar-div");
     container.innerHTML = "";
@@ -90,6 +96,24 @@ function getWeekdayIndex(weekday){
         case "Fredag": return 4;
         case "Lördag": return 5;
         case "Söndag": return 6;
+    }
+}
+
+function getMonthName(month) {
+    switch(month) {
+        case 01: return "Januari";
+        case 02: return "Februari";
+        case 03: return "Mars";
+        case 04: return "April";
+        case 05: return "Maj";
+        case 06: return "Juni";
+        case 07: return "Juli";
+        case 08: return "Augusti";
+        case 09: return "September";
+        case 10: return "Oktober";
+        case 11: return "November";
+        case 12: return "December";
+        
     }
 }
 //"".split("-")
