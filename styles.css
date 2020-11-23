@@ -49,6 +49,7 @@ h1, h2, h3, h4 {
     left: 0;
     font-family: optima, fantasy;
     border: 3px outset gray;  
+    padding-left: 1rem;
 }
 
 .calendar {
@@ -63,6 +64,11 @@ h1, h2, h3, h4 {
     height: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 5rem 5rem 5rem 5rem 5rem 5rem;
+}
+
+.dateTime {
+    font-family: optima,fantasy;
+    padding-left: 1rem;
 }
 
 .month-nav {
