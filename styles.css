@@ -14,7 +14,7 @@ header {
     padding-bottom: 1rem;
 }
 
-h4 {
+h2 {
     font-family: optima, fantasy;
     display: flex;
     justify-content: center;
@@ -47,6 +47,7 @@ h4 {
     left: 0;
     font-family: optima, fantasy;
     border: 3px outset gray;  
+    padding-left: 1rem;
 }
 
 .calendar {
@@ -61,4 +62,9 @@ h4 {
     height: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 6rem 6rem 6rem 6rem 6rem 6rem;
+}
+
+.dateTime {
+    font-family: optima,fantasy;
+    padding-left: 1rem;
 }
