@@ -2,4 +2,9 @@
     .calendar{
         display: none;
     }
+    .dateTime {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }

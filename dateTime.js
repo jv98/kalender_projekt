@@ -45,6 +45,6 @@ function showTimeDate() {
     setTimeout("showTimeDate()", 1000)
 
     //displays current time, weekday and date on page
-    displayTimeDate.textContent = weekdayarray[day] + " " + date + " " + montharray[month] + " " + year + " | " + h + ":" + m + ":" + s;
+    displayTimeDate.textContent = weekdayarray[day] + " " + date + " " + montharray[month] + " " + year + ' | ' + h + ":" + m + ":" + s;
     displayTimeDate.innerText = weekdayarray[day] + " " + date + " " + montharray[month] + " " + year + " | " + h + ":" + m + ":" + s;
 }
