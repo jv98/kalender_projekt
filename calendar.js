@@ -31,7 +31,7 @@ function showNextMonth() {
 /** fetches an array of the days of the current month from the API */
 function fetchDays() {
     $.ajax({
-        url: `http://sholiday.faboul.se/dagar/v2.1/${year}/${month}`,
+        url: `https://sholiday.faboul.se/dagar/v2.1/${year}/${month}`,
         type: "GET",
         dataType: "jsonp",
         success: function(response) {
