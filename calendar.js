@@ -79,12 +79,21 @@ function createDayDivs(days) {
             dayDiv.style.color = "red";
         }
         else {
-            dayDiv.innerHTML = day.datum.split("-")[2];
+            dayDiv.innerHTML = day.datum.split("-")[2]; 
+        }
+        if (calendarTodos.length > 0) {
+        for ( let i=0; i<calendarTodos.length; i++ ) {
+            let calendarTodoContainer = document.createElement("p")
+            calendarTodoContainer.innerHTML = calendarTodos[i]
+            dayDiv.appendChild(calendarTodoContainer);
+            }
         }
         dayDivs.push(dayDiv); 
     }
-    return dayDivs;
-}
+   
+    
+ return dayDivs;
+} 
 
 /** creates an index for the first day of the month, depending on which weekday it is */
 function getWeekdayIndex(weekday){
@@ -115,4 +124,14 @@ function getMonthName(month) {
         case 11: return "November";
         case 12: return "December";       
     }
+}
+function getTodos(date) {
+    calendarTodos = [];
+    for (const todoItem of todoList) {
+        if (todoItem.date === date) {
+            calendarTodos.push(todoItem.title)
+        }
+    }   
+    console.log(calendarTodos)
+    return calendarTodos;
 }

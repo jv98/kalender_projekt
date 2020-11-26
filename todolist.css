@@ -1,0 +1,11 @@
+
+.todo {
+    background-color: lightgray;
+    padding: 2rem;
+    border-radius: 3rem;
+    margin-top: 2rem;
+}
+
+.todo h2 {
+    text-align: center;
+}

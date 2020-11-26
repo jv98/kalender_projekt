@@ -6,6 +6,11 @@ let month = 11;
 function main() {
     addEventListeners();
     renderCalendar();
+    renderTodos();
+    getTodos();
+    
+    
+    
 }
 
 function addEventListeners() {
@@ -15,3 +20,4 @@ function addEventListeners() {
     const nextMonthIcon = document.getElementById("next-month-icon");
     nextMonthIcon.addEventListener("click", showNextMonth);
 }
+
