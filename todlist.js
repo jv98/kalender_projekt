@@ -15,7 +15,7 @@ function renderTodos() {
         listItem.innerHTML = todo.date + ": " + todo.title;
         listItem.addEventListener('click', function(){
             todoList.splice();
-            listItem.remove("")
+            listItem.remove()
         });
         todoContainer.append(listItem);
     }
