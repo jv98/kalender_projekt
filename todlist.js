@@ -2,8 +2,8 @@ const todoList = [{
     title: "Nils fyller år",
     date: "2020-11-25"
 }, {
-    title: "Handla",
-    date: "2020-11-28"
+    title: "Nils fyller år",
+    date: "2020-11-25"
 }]
 
 function renderTodos() {
@@ -14,13 +14,13 @@ function renderTodos() {
         const listItem = document.createElement("li");
         listItem.innerHTML = todo.date + ": " + todo.title;
         listItem.addEventListener('click', function(){
-            todoList.splice();
+            todoList.splice(todoList.indexOf(todo),1)
             listItem.remove()
+           
         });
         todoContainer.append(listItem);
     }
 }
-
 
 function addNewTodo() {
     const todoTitle = document.getElementById("todo-input").value;
@@ -32,4 +32,4 @@ function addNewTodo() {
     renderTodos(); 
     renderCalendar();   
 }
-console.log(todoList)
+
