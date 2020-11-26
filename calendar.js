@@ -70,8 +70,9 @@ function createDayDivs(days) {
             emptyDiv.innerHTML = "";
             dayDivs.push(emptyDiv);
         }
-
+        
     for (const day of days) {
+        const countOnDate = getTodos(day.datum);
         const dayDiv = document.createElement("div")
         //ATT FIXA: hämta todos för det aktuella datumet
         if (day.helgdag !== undefined) {
@@ -81,14 +82,14 @@ function createDayDivs(days) {
         else {
             dayDiv.innerHTML = day.datum.split("-")[2]; 
         }
-        if (calendarTodos.length > 0) {
-        for ( let i=0; i<calendarTodos.length; i++ ) {
+        if (countOnDate > 0) {
             let calendarTodoContainer = document.createElement("p")
-            calendarTodoContainer.innerHTML = calendarTodos[i]
+            calendarTodoContainer.innerHTML = countOnDate;
             dayDiv.appendChild(calendarTodoContainer);
-            }
+            
         }
         dayDivs.push(dayDiv); 
+        console.log(day)
     }
    
     
@@ -125,13 +126,17 @@ function getMonthName(month) {
         case 12: return "December";       
     }
 }
+
+
 function getTodos(date) {
-    calendarTodos = [];
+        let x = 0;
     for (const todoItem of todoList) {
+     
         if (todoItem.date === date) {
-            calendarTodos.push(todoItem.title)
+            x++
+            
         }
     }   
-    console.log(calendarTodos)
-    return calendarTodos;
+    console.log(x)
+    return x;
 }

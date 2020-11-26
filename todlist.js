@@ -16,7 +16,7 @@ function renderTodos() {
         listItem.addEventListener('click', function(){
             todoList.splice(todoList.indexOf(todo),1)
             listItem.remove()
-           
+           renderCalendar();
         });
         todoContainer.append(listItem);
     }
