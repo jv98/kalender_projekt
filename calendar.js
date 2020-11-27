@@ -70,8 +70,9 @@ function createDayDivs(days) {
             emptyDiv.innerHTML = "";
             dayDivs.push(emptyDiv);
         }
-
+        
     for (const day of days) {
+        const countOnDate = getTodos(day.datum);
         const dayDiv = document.createElement("div")
         //ATT FIXA: hämta todos för det aktuella datumet
         if (day.helgdag !== undefined) {
@@ -79,12 +80,21 @@ function createDayDivs(days) {
             dayDiv.style.color = "red";
         }
         else {
-            dayDiv.innerHTML = day.datum.split("-")[2];
+            dayDiv.innerHTML = day.datum.split("-")[2]; 
+        }
+        if (countOnDate > 0) {
+            let calendarTodoContainer = document.createElement("p")
+            calendarTodoContainer.innerHTML = countOnDate;
+            dayDiv.appendChild(calendarTodoContainer);
+            
         }
         dayDivs.push(dayDiv); 
+        console.log(day)
     }
-    return dayDivs;
-}
+   
+    
+ return dayDivs;
+} 
 
 /** creates an index for the first day of the month, depending on which weekday it is */
 function getWeekdayIndex(weekday){
@@ -115,4 +125,18 @@ function getMonthName(month) {
         case 11: return "November";
         case 12: return "December";       
     }
+}
+
+
+function getTodos(date) {
+        let x = 0;
+    for (const todoItem of todoList) {
+     
+        if (todoItem.date === date) {
+            x++
+            
+        }
+    }   
+    console.log(x)
+    return x;
 }
