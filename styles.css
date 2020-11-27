@@ -42,7 +42,7 @@ h1, h2, h3, h4 {
 }
 
 .Todobar {
-    background-color: #6db8eb;
+    background-color:#0767a7;
     flex-direction: column;
     height: 100%;
     min-width: 15rem;

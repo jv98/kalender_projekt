@@ -1,11 +1,52 @@
-
-.todoDiv{
-    background-color:#0767a7;
-}
 ul{
     color: black;
-}
-li{
     list-style-type: none;
-    font-family: 'IBM Plex Serif', serif;
+ 
 }
+ul li {
+    cursor: pointer;
+    display: flex;
+    padding: 1rem 1rem 2rem 3rem;
+    background: #eee;
+    font-size: 1rem;
+    transition: 0.2s;
+  
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  /* Darker background-color on hover */
+  ul li:hover {
+    background: #ddd;
+  }
+
+  /* Style the input */
+  input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 0.5rem;
+    float: left;
+    font-size: 16px;
+  }
+  
+  /* Style the "Add" button */
+  .addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+  }
+  
+  .addBtn:hover {
+    background-color: #bbb;
+  }
