@@ -1,11 +1,7 @@
 
-.todo {
-    background-color: lightgray;
-    padding: 2rem;
-    border-radius: 3rem;
-    margin-top: 2rem;
+.todoDiv{
+    background-color:rgba(8, 8, 167, 0.719);
 }
-
-.todo h2 {
-    text-align: center;
+ul{
+    color: black;
 }
