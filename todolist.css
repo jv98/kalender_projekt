@@ -17,11 +17,6 @@ ul li {
     -ms-user-select: none;
     user-select: none;
   }
-  /* Darker background-color on hover */
-  ul li:hover {
-    background: #ddd;
-  }
-
   /* Style the input */
   input {
     margin: 0;
