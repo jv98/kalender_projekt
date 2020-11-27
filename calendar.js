@@ -72,7 +72,7 @@ function createDayDivs(days) {
         }
         
     for (const day of days) {
-        const countOnDate = getTodos(day.datum);
+        const countOnDate = getTodos(day.datum); // this get the numbers from row 131 also counts how many it dos for that day
         const dayDiv = document.createElement("div")
         //ATT FIXA: hämta todos för det aktuella datumet
         if (day.helgdag !== undefined) {
@@ -82,6 +82,7 @@ function createDayDivs(days) {
         else {
             dayDiv.innerHTML = day.datum.split("-")[2]; 
         }
+        // crates the p tag that get nummber inside of it
         if (countOnDate > 0) {
             let calendarTodoContainer = document.createElement("p")
             calendarTodoContainer.innerHTML = countOnDate;
@@ -127,7 +128,7 @@ function getMonthName(month) {
     }
 }
 
-
+// this count how many todo that are in todo list
 function getTodos(date) {
         let x = 0;
     for (const todoItem of todoList) {

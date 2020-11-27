@@ -59,6 +59,8 @@ h1, h2, h3, h4 {
 }
 
 .gridContainer {
+    font-weight: bolder;
+    font-family: 'IBM Plex Serif', serif;
     display: grid;
     background-color: blanchedalmond;
     padding: 1rem;
@@ -68,7 +70,7 @@ h1, h2, h3, h4 {
 }
 
 .dateTime {
-    font-family: optima,fantasy;
+    font-family: 'IBM Plex Serif', serif;
     padding-left: 1rem;
 }
 
@@ -79,4 +81,5 @@ h1, h2, h3, h4 {
     background-color: #ebdbd0;;
     align-items: center;
     border: 1px solid;
+    
 }

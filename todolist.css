@@ -1,7 +1,11 @@
 
 .todoDiv{
-    background-color:rgba(8, 8, 167, 0.719);
+    background-color:#0767a7;
 }
 ul{
     color: black;
+}
+li{
+    list-style-type: none;
+    font-family: 'IBM Plex Serif', serif;
 }
