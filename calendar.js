@@ -90,7 +90,7 @@ function createDayDivs(days) {
             
         }
         dayDivs.push(dayDiv); 
-        console.log(day)
+       // console.log(day)
     }
    
     
@@ -138,6 +138,6 @@ function getTodos(date) {
             
         }
     }   
-    console.log(x)
+    //console.log(x)
     return x;
 }
