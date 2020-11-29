@@ -83,3 +83,8 @@ h1, h2, h3, h4 {
     border: 1px solid;
     
 }
+
+.month-day:hover{
+    border: 1px solid #6db8eb;
+    transition: .1s ease-in;
+}
