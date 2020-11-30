@@ -1,2 +1,4 @@
 # kalender_projekt
-här sak vi som en groupp skapa en kalender och en todo list där man kopllar todo listan till kalender
+vår uppgiften var att skapa en kalender som har en todo list som är länkade till kalendern såm också ska visa med nummer på kalenderen
+länk till sidan https://jv98.github.io/kalender_projekt/
+länk till report https://github.com/jv98/kalender_projekt
