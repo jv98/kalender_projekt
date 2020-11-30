@@ -7,8 +7,14 @@
         align-items: center;
         justify-content: center;
     }
-
     .todoDiv {
         width: 100%;
     }
 }
+
+    .addBtn {
+      
+        width: 25%;
+    }
+}
+
