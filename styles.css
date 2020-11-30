@@ -26,7 +26,7 @@ h1, h2, h3, h4 {
 }
 
 .weekdays {
-    background-color: #ebdbd0;
+    background-color:  rgb(89, 164, 250);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     font-family: optima, fantasy;
@@ -41,6 +41,7 @@ h1, h2, h3, h4 {
     height: 100%;
     width: 100%;
     display: flex;
+
 }
 
 .todoDiv {
@@ -65,7 +66,7 @@ h1, h2, h3, h4 {
     font-weight: bolder;
     font-family: 'IBM Plex Serif', serif;
     display: grid;
-    background-color: blanchedalmond;
+    background-color: rgb(89, 164, 250);
     padding: 1rem;
     height: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -84,7 +85,7 @@ h1, h2, h3, h4 {
     display: flex;
     justify-content: space-between;
     padding: 0 1rem;
-    background-color: #ebdbd0;;
+    background-color:  rgb(89, 164, 250);
     align-items: center;
     border: 1px solid;
     border-left: none;
