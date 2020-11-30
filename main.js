@@ -1,16 +1,16 @@
 window.addEventListener("load", main);
 
-let year = 2020;
-let month = 11;
+const date = new Date ();
+let year = date.getFullYear();
+let month = date.getMonth() + 1;
 
 function main() {
     addEventListeners();
+    getFromLocalStorage(); 
+    showTimeDate();
     renderCalendar();
     renderTodos();
-    getTodos();
-    
-    
-    
+    getTodos();   
 }
 
 function addEventListeners() {

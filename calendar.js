@@ -78,7 +78,6 @@ function createDayDivs(days) {
         dayDiv.addEventListener('click',  () => {
             console.log('clickd on the day', day.datum);
         })
-        //ATT FIXA: hämta todos för det aktuella datumet
         if (day.helgdag !== undefined) {
             dayDiv.innerHTML = day.datum.split("-")[2] + " " + day.helgdag;
             dayDiv.style.color = "red";
@@ -94,10 +93,7 @@ function createDayDivs(days) {
             
         }
         dayDivs.push(dayDiv); 
-       // console.log(day)
-    }
-   
-    
+    }     
  return dayDivs;
 } 
 
@@ -132,7 +128,7 @@ function getMonthName(month) {
     }
 }
 
-// this count how many todo that are in todo list
+/** counts how many todos that are in todo list */
 function getTodos(date) {
         let x = 0;
     for (const todoItem of todoList) {
@@ -142,6 +138,5 @@ function getTodos(date) {
             
         }
     }   
-    //console.log(x)
     return x;
 }

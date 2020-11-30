@@ -1,15 +1,5 @@
 
-let todoList = [
-
-]
-
-// {
-//     title: "Nils fyller år",
-//     date: "2020-11-25"
-// }, {
-//     title: "Nils fyller år",
-//     date: "2020-11-25"
-// }
+let todoList = [];
 
 
 function renderTodos() {
@@ -23,7 +13,7 @@ function renderTodos() {
             todoList.splice(todoList.indexOf(todo),1)
             listItem.remove()
             addToLocalStorage()
-           renderCalendar();
+            renderCalendar();
         });
         todoContainer.append(listItem);
     }
@@ -52,16 +42,9 @@ function getFromLocalStorage () {
 
     const localStorageData = JSON.parse(localStorage.getItem('todoList'))
     if(localStorageData !== null){
-        console.log('A',localStorageData);
         for(item of localStorageData){
             todoList.push(item)
-        }
-       
-        renderTodos();
-       
-        console.log('T',todoList);
-       
-    }
-   
+        }      
+        renderTodos();     
+    } 
 }
-getFromLocalStorage(); 
