@@ -1,7 +1,12 @@
-
+aside{
+  height: 100%;
+  overflow: scroll;
+  
+}
 .todoDiv{
     background-color:#33adff;
     min-width: 320px;
+
 }
 
 ul{
