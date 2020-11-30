@@ -1,5 +1,3 @@
-window.addEventListener('load', showTimeDate)
-
 function showTimeDate() {
     let today = new Date();
 
