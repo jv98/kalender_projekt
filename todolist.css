@@ -1,6 +1,7 @@
 
 .todoDiv{
-    background-color:#0767a7;
+    background-color:#33adff;
+    min-width: 320px;
 }
 ul{
     color: black;
