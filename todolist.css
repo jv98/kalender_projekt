@@ -15,7 +15,7 @@ ul li {
     cursor: pointer;
     display: flex;
     padding: 1rem 1rem 2rem 3rem;
-    background: #eee;
+    /* background: #eee; */
     font-size: 1rem;
     transition: 0.2s;
   
@@ -34,6 +34,7 @@ ul li {
     padding: 0.5rem;
     float: left;
     font-size: 16px;
+    margin-left: 1.5rem;
   }
   
   /* Style the "Add" button */
@@ -43,6 +44,7 @@ ul li {
     color: #555;
     float: left;
     text-align: center;
+    margin-left: 1.5rem;
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
