@@ -22,6 +22,7 @@ function renderTodos() {
         listItem.addEventListener('click', function(){
             todoList.splice(todoList.indexOf(todo),1)
             listItem.remove()
+            addToLocalStorage()
            renderCalendar();
         });
         todoContainer.append(listItem);
