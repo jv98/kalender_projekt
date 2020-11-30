@@ -6,7 +6,8 @@ html, body {
 }
 
 header {
-    background:#0f4c75;
+    background:#0099ff;
+    background-image: url(http://clipart-library.com/img/1753991.jpg);
     margin: auto;
     top: auto;
     width: auto;
@@ -33,6 +34,7 @@ h1, h2, h3, h4 {
     margin-top: 0;
     margin-bottom: 0;
     border: 1px solid;
+    border-left: none;
 }
 
 .mainContent {
@@ -41,15 +43,16 @@ h1, h2, h3, h4 {
     display: flex;
 }
 
-.Todobar {
-    background-color:#0767a7;
+.todoDiv {
+    background-color: #6db8eb;
+    background-image: url(https://i.pinimg.com/originals/12/cf/dc/12cfdcbb2320824919f1f1b119591d39.jpg);
     flex-direction: column;
     height: 100%;
     min-width: 15rem;
     flex: 20%;
     left: 0;
     font-family: optima, fantasy;
-    border: 3px outset gray;  
+    border: 1px solid black;
     padding-left: 1rem;
 }
 
@@ -72,6 +75,9 @@ h1, h2, h3, h4 {
 .dateTime {
     font-family: 'IBM Plex Serif', serif;
     padding-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .month-nav {
@@ -81,5 +87,11 @@ h1, h2, h3, h4 {
     background-color: #ebdbd0;;
     align-items: center;
     border: 1px solid;
+    border-left: none;
     
+}
+
+.month-day:hover{
+    border: 1px solid #6db8eb;
+    transition: .1s ease-in;
 }

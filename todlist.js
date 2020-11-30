@@ -1,10 +1,16 @@
-const todoList = [{
-    title: "Nils fyller år",
-    date: "2020-11-25"
-}, {
-    title: "Nils fyller år",
-    date: "2020-11-25"
-}]
+
+let todoList = [
+
+]
+
+// {
+//     title: "Nils fyller år",
+//     date: "2020-11-25"
+// }, {
+//     title: "Nils fyller år",
+//     date: "2020-11-25"
+// }
+
 
 function renderTodos() {
     const todoContainer = document.getElementById("todo-container");
@@ -16,6 +22,7 @@ function renderTodos() {
         listItem.addEventListener('click', function(){
             todoList.splice(todoList.indexOf(todo),1)
             listItem.remove()
+            addToLocalStorage()
            renderCalendar();
         });
         todoContainer.append(listItem);
@@ -29,7 +36,32 @@ function addNewTodo() {
     let newTodo = {title: todoTitle, date: todoDate};
 
     todoList.push(newTodo);
+    addToLocalStorage()
+
     renderTodos(); 
     renderCalendar();   
 }
 
+
+function addToLocalStorage() {
+    localStorage.setItem('todoList',JSON.stringify(todoList));
+    renderTodos(todoList);
+}
+
+function getFromLocalStorage () {
+
+    const localStorageData = JSON.parse(localStorage.getItem('todoList'))
+    if(localStorageData !== null){
+        console.log('A',localStorageData);
+        for(item of localStorageData){
+            todoList.push(item)
+        }
+       
+        renderTodos();
+       
+        console.log('T',todoList);
+       
+    }
+   
+}
+getFromLocalStorage(); 

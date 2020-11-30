@@ -1,3 +1,9 @@
+
+.todoDiv{
+    background-color:#33adff;
+    min-width: 320px;
+}
+
 ul{
     width: max-content;
     color: black;

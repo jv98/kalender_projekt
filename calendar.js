@@ -74,6 +74,10 @@ function createDayDivs(days) {
     for (const day of days) {
         const countOnDate = getTodos(day.datum); // this get the numbers from row 131 also counts how many it dos for that day
         const dayDiv = document.createElement("div")
+        dayDiv.classList.add('month-day')
+        dayDiv.addEventListener('click',  () => {
+            console.log('clickd on the day', day.datum);
+        })
         //ATT FIXA: hämta todos för det aktuella datumet
         if (day.helgdag !== undefined) {
             dayDiv.innerHTML = day.datum.split("-")[2] + " " + day.helgdag;
@@ -90,7 +94,7 @@ function createDayDivs(days) {
             
         }
         dayDivs.push(dayDiv); 
-        console.log(day)
+       // console.log(day)
     }
    
     
@@ -138,6 +142,6 @@ function getTodos(date) {
             
         }
     }   
-    console.log(x)
+    //console.log(x)
     return x;
 }
