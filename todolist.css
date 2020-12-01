@@ -6,7 +6,9 @@ aside{
 .todoDiv{
     background-color:#33adff;
     min-width: 320px;
-
+    overflow-y: auto; 
+    height: 75.7%; 
+    padding-bottom: 10rem;
 }
 
 ul{
