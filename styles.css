@@ -96,3 +96,8 @@ h1, h2, h3, h4 {
     border: 1px solid #6db8eb;
     transition: .1s ease-in;
 }
+
+.trash {
+    cursor: pointer;
+    margin-left: 1rem;
+}
